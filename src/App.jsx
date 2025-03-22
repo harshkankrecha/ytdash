@@ -22,7 +22,7 @@ function App() {
     setStatus('loading');
     setBtnStatus(true);
     try {      
-      const response = await axios.post('http://localhost:5000/api',{ videoUrl,format,startTime,endTime })
+      const response = await axios.post('http://0.0.0.0:10000/api',{ videoUrl,format,startTime,endTime })
       setDownloadLink(response.data.downloadLink);
       setAudioText(response.data.audioText);
       setStatus('completed');
